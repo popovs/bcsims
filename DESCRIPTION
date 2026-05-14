@@ -3,14 +3,11 @@ Type: Package
 Title: Access and Publish Biodiversity Data to the BC Species Inventory Management System
 Version: 0.1.0.9000
 Authors@R: c(
-    person(
-      "Jane", "Doe",
-      email = "jane@example.com",
-      role = c("aut", "cre")
-    )
+    person("Sarah", "Popov", role = c("aut", "cre")),
+    person(given = "Province of British Columbia", role = "cph"))
   )
-Description: More about what it does (maybe more than one line).
-    Continuation lines should be indented.
-License: What license is it under?
+Description: Seach, query, and download biodiversity data housed in the BC Species Inventory Management System (SIMS). 
+    Or, create a new project and populate it with your data directly from R. 
+License: Apache License (>= 2)
 Encoding: UTF-8
 LazyData: true
