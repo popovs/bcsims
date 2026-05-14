@@ -6,7 +6,7 @@ Authors@R: c(
     person("Sarah", "Popov", role = c("aut", "cre")),
     person(given = "Province of British Columbia", role = "cph"))
   )
-Description: Seach, query, and download biodiversity data housed in the BC Species Inventory Management System (SIMS). 
+Description: Seach, query, and download biodiversity data housed in the BC Species Inventory Management System (<https://sims.nrs.gov.bc.ca/>). 
     Or, create a new project and populate it with your data directly from R. 
 License: Apache License (>= 2)
 Encoding: UTF-8
