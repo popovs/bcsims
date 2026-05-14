@@ -1,0 +1,16 @@
+Package: bcsims
+Type: Package
+Title: Access and Publish Biodiversity Data to the BC Species Inventory Management System
+Version: 0.1.0.9000
+Authors@R: c(
+    person(
+      "Jane", "Doe",
+      email = "jane@example.com",
+      role = c("aut", "cre")
+    )
+  )
+Description: More about what it does (maybe more than one line).
+    Continuation lines should be indented.
+License: What license is it under?
+Encoding: UTF-8
+LazyData: true
