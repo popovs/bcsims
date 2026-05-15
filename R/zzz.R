@@ -13,5 +13,10 @@
 # limitations under the License.
 
 # Set package-specific environment & variables
+# These variables disappear once package is unloaded from user's system
+# E.g., once user logs on to SIMS, you can store user info into pkg env
+# for recall in other fxns. Once user is done w bcsims, vars disappear.
+
+# https://r-pkgs.org/data.html#sec-data-state
 
 ._bcsimsenv_ <- new.env(parent = emptyenv())
