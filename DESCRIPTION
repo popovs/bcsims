@@ -3,11 +3,12 @@ Type: Package
 Title: Access and Publish Biodiversity Data to the BC Species Inventory Management System
 Version: 0.1.0.9000
 Authors@R: c(
-    person("Sarah", "Popov", role = c("aut", "cre"), comment = c(ORCID = "0000-0002-8257-6438")),
-    person(given = "Province of British Columbia", role = "cph"))
+    person("Sarah", "Popov", email = "sarah.popov@gov.bc.ca", role = c("aut", "cre"), comment = c(ORCID = "0000-0002-8257-6438")),
+    person(given = "Province of British Columbia", role = "cph")
   )
 Description: Seach, query, and download biodiversity data housed in the BC Species Inventory Management System (<https://sims.nrs.gov.bc.ca/>). 
     Or, create a new project and populate it with your data directly from R. 
 License: Apache License (>= 2)
 Encoding: UTF-8
 LazyData: true
+RoxygenNote: 7.3.3
