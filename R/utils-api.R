@@ -18,7 +18,7 @@
 
 #' URLs --------------------------------------------------------------------
 
-#' getOption is helpful here bc during package developement, you can
+#' getOption is helpful here bc during package developement/use, you can
 #' easily use `options()` to change the underlying URL on the fly
 #' if needed.
 #' https://r-pkgs.org/code.html#'sec-code-onLoad-onAttach
@@ -72,5 +72,30 @@ sims_redirect_uri <- function() {
   getOption(
     "bcsims.sims_redirect_uri",
     default = "https://sims.nrs.gov.bc.ca"
+  )
+}
+
+
+# Other params ------------------------------------------------------------
+
+#' SIMS API client id
+#' @noRd
+sims_client_id <- function() {
+  getOption(
+    "bcsims.sims_client_id",
+    default = "sims-4461"
+  )
+}
+
+
+# OAuth -------------------------------------------------------------------
+
+#' Create OAuth client to connect to SIMS
+#' @noRd
+sims_client <- function() {
+  httr2::oauth_client(
+    id = sims_client_id(),
+    token_url = sims_token_url(),
+    name = "bcsims_oauth"
   )
 }
