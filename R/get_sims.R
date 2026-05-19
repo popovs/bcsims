@@ -48,64 +48,34 @@ get_sims <- function(...) {
 }
 
 
-#' Get a table of all available projects in SIMS
-#'
-#' This function grabs all projects visible to as a SIMS user.
-#'
-#' @details API parameters are supplied as a named vector list.
-#' For the most up-to-date list of parameters accepted by the API, see the [API documentation](https://api-biohubbc.apps.silver.devops.gov.bc.ca/api-docs/).
-#' * **keyword** String. Keywords to search for in the project name. Case-insensitive.
-#' * **itis_tsns** Integer. ITIS TSN numbers. Multiple numbers can be supplied at once as a comma-separated vector. _Note this will eventually be superceded by BC Conservation Data Centre taxon codes._
-#' * **itis_tsn** Integer. ITIS TSN number. _Note this will eventually be superceded by BC Conservation Data Centre taxon codes._
-#' * **project_name** String. Partial or full match of project name. Case-insensitive.
-#'
-#' @param params A vector of API parameters, e.g. `c(keyword = "bctw", keyword = "telemetry", itis_tsns = c(180701, 202411))`. See Details for a list of acceptable paramters.
-#'
-#' @returns A tibble of projects.
-#' @export
-#'
-#' @examples
-#' \dontrun{
-#' # Get all projects the user has access to
-#' get_sims_projects()
-#'
-#' # Filter to only those with the keyword "wolf"
-#' get_sims_projects(params = c(keyword = "wolf"))
-#'
-#' # Filter to only those with the keyword "wolf" and ITIS TSNs of caribou
-#' get_sims_projects(params = c(keyword = "wolf", itis_tsns = c(180701, 202411)))
-#' }
-get_sims_projects <- function(params = NULL) {
+
+
+# TODO: should be option to leave project_id NULL,
+# which calls 'get all surveys' method, or to supply project_id(s),
+# which returns surveys for the project_id(s)
+get_sims_surveys <- function(project_id, params = NULL) {
   # Build request
-  # /project/<?params = param>
-  req <- get_sims("project") |> # build our base SIMS request URL using the req_sims() fxn, then append 'project'
+  # /project/{projectId}/survey/
+  req <- get_sims("project", project_id, "survey") |>
     httr2::req_url_query(!!!params, .multi = "explode") # then add our params to the end of the URL
 
   # GET response
   resp <- httr2::req_perform(req) |>
     httr2::resp_body_string() # resp_body_json for tidyjson methods, resp_body_string for jsonlite methods.
 
-  # Extract projects
-  projects <- jsonlite::fromJSON(resp)[[1]] # Just grab first item. Item 2 is just the pagination information
+  # Extract surveys
+  surveys <- jsonlite::fromJSON(resp)[[1]] # Just grab first item. Item 2 is just the pagination information
 
-  # Tidy up projects table
-  # TODO: maybe make this a separate tidying fxn?
+  # survey-specific cleanup
+  surveys <- surveys |>
+    tidyr::as_tibble() |> # to match other tidy outputs/generally with the broader API pkg ecosystem
+    dplyr::mutate(progress = dplyr::case_when(progress_id == 1 ~ "Planning",
+                                              progress_id == 2 ~ "In Progress",
+                                              progress_id == 3 ~ "Completed")) |>
+    dplyr::mutate(start_date = as.Date(start_date),
+                  end_date = as.Date(end_date)) |>
+    dplyr::select(survey_id, name, start_date, end_date, progress, focal_species, focal_species_names)
 
-  # TODO: perhaps a page/n records limit - once SIMS gets huge?
+  return(surveys)
 
-  # First clean up uggo members matrix-col
-  members <- projects |>
-    dplyr::select(project_id, members) |>
-    tidyr::unnest(cols = members) |>
-    dplyr::select(project_id, display_name) |> # no need to keep system_user_id at this point
-    dplyr::group_by(project_id) |>
-    dplyr::summarise(members = list(display_name)) # create a list-col of members (rather than matrix col)
-
-  # Merge members col back to original df
-  projects <- projects |>
-    dplyr::select(-members, -types) |> # drop existing ugly matrix-col, types col
-    merge(members, by = "project_id") |>
-    tidyr::as_tibble() # tidy it - make our list-cols explicit!
-
-  return(projects)
 }
