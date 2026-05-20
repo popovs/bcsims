@@ -24,7 +24,7 @@
 #' * **project_name** String. Partial or full match of project name. Case-insensitive.
 #'
 #' @param all Logical. Should records for all available projects in SIMS be returned, or only personal user projects? All projects are returned by default.
-#' @param params A vector of API parameters, e.g. `c(keyword = "bctw", keyword = "telemetry", itis_tsns = c(180701, 202411))`. See Details for a list of acceptable parameters.
+#' @param params A vector of API parameters, e.g. `list(keyword = "bctw", keyword = "telemetry", itis_tsns = c(180701, 202411))`. See Details for a list of acceptable parameters.
 #'
 #' @returns A tibble of projects.
 #' @export
@@ -35,10 +35,10 @@
 #' get_sims_projects()
 #'
 #' # Filter to only those with the keyword "wolf"
-#' get_sims_projects(params = c(keyword = "wolf"))
+#' get_sims_projects(params = list(keyword = "wolf"))
 #'
 #' # Filter to only those with the keyword "wolf" and ITIS TSNs of caribou
-#' get_sims_projects(params = c(keyword = "wolf", itis_tsns = c(180701, 202411)))
+#' get_sims_projects(params = list(keyword = "wolf", itis_tsns = c(180701)))
 #' }
 get_sims_projects <- function(all = TRUE, params = NULL) {
   # If all = TRUE, just run the API request on the whole SIMS db.

@@ -3,5 +3,6 @@
 S3method(get_sims_surveys,default)
 S3method(get_sims_surveys,numeric)
 export(get_sims)
+export(get_sims_devices)
 export(get_sims_projects)
 export(get_sims_surveys)

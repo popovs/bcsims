@@ -28,7 +28,8 @@
 #' all_surveys <- get_sims_surveys()
 #'
 #' # Get all surveys that match a certain criteria
-#' wolf_surveys <- get_sims_surveys(params = c(itis_tsn = 180596))
+#' wolf_surveys <- get_sims_surveys(params = list(keyword = "wolf"))
+#' caribou_surveys <- get_sims_surveys(params = list(itis_tsn = 180596))
 #'
 #' # Get surveys under a specific project ID
 #' # Note this method ignores the `params` argument
@@ -80,7 +81,12 @@ get_sims_surveys.numeric <- function(project_id, ...) {
     httr2::resp_body_string() # resp_body_json for tidyjson methods, resp_body_string for jsonlite methods.
 
   # Extract surveys
+  # TODO: will this fail if there are many pages? does the request
+  # need to be looped for each page?
   surveys <- jsonlite::fromJSON(resp)[[1]] # Just grab first item. Item 2 is just the pagination information
+
+  # Add project_id as a col
+  surveys$project_id <- project_id
 
   # survey-specific cleanup
   surveys <- surveys |>
@@ -90,7 +96,7 @@ get_sims_surveys.numeric <- function(project_id, ...) {
                                               progress_id == 3 ~ "Completed")) |>
     dplyr::mutate(start_date = as.Date(start_date),
                   end_date = as.Date(end_date)) |>
-    dplyr::select(survey_id, name, start_date, end_date, progress, focal_species, focal_species_names)
+    dplyr::select(survey_id, project_id, name, start_date, end_date, progress, focal_species, focal_species_names)
 
   return(surveys)
 
