@@ -2,22 +2,35 @@
 % Please edit documentation in R/projects.R
 \name{get_sims_projects}
 \alias{get_sims_projects}
-\title{Get a table of all available projects in SIMS}
+\title{Copyright 2026 Province of British Columbia}
 \usage{
 get_sims_projects(all = TRUE, params = NULL)
 }
 \arguments{
 \item{all}{Logical. Should records for all available projects in SIMS be returned, or only personal user projects? All projects are returned by default.}
 
-\item{params}{A vector of API parameters, e.g. `c(keyword = "bctw", keyword = "telemetry", itis_tsns = c(180701, 202411))`. See Details for a list of acceptable paramters.}
+\item{params}{A vector of API parameters, e.g. `c(keyword = "bctw", keyword = "telemetry", itis_tsns = c(180701, 202411))`. See Details for a list of acceptable parameters.}
 }
 \value{
 A tibble of projects.
 }
 \description{
-This function grabs all projects visible to you as a SIMS user.
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
 }
 \details{
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+Get a table of all available projects in SIMS
+
+This function grabs all projects visible to you as a SIMS user.
+
 API parameters are supplied as a named vector list.
 For the most up-to-date list of parameters accepted by the API, see the [API documentation](https://api-biohubbc.apps.silver.devops.gov.bc.ca/api-docs/).
 * **keyword** String. Keywords to search for in the project name. Case-insensitive.

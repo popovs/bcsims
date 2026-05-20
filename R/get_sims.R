@@ -43,6 +43,10 @@ get_sims <- function(...) {
   # Add the url_bits to the request URL
   req <- req |>
     httr2::req_url_path_append(url_bits)
+  # TODO: since the request is pretty much always performed
+  # in all subsequent fxns, maybe just perform the request within
+  # this fxn too? And Take care of basic table formatting +
+  # dealing w pagination?
   # Return
   return(req)
 }
@@ -50,32 +54,4 @@ get_sims <- function(...) {
 
 
 
-# TODO: should be option to leave project_id NULL,
-# which calls 'get all surveys' method, or to supply project_id(s),
-# which returns surveys for the project_id(s)
-get_sims_surveys <- function(project_id, params = NULL) {
-  # Build request
-  # /project/{projectId}/survey/
-  req <- get_sims("project", project_id, "survey") |>
-    httr2::req_url_query(!!!params, .multi = "explode") # then add our params to the end of the URL
 
-  # GET response
-  resp <- httr2::req_perform(req) |>
-    httr2::resp_body_string() # resp_body_json for tidyjson methods, resp_body_string for jsonlite methods.
-
-  # Extract surveys
-  surveys <- jsonlite::fromJSON(resp)[[1]] # Just grab first item. Item 2 is just the pagination information
-
-  # survey-specific cleanup
-  surveys <- surveys |>
-    tidyr::as_tibble() |> # to match other tidy outputs/generally with the broader API pkg ecosystem
-    dplyr::mutate(progress = dplyr::case_when(progress_id == 1 ~ "Planning",
-                                              progress_id == 2 ~ "In Progress",
-                                              progress_id == 3 ~ "Completed")) |>
-    dplyr::mutate(start_date = as.Date(start_date),
-                  end_date = as.Date(end_date)) |>
-    dplyr::select(survey_id, name, start_date, end_date, progress, focal_species, focal_species_names)
-
-  return(surveys)
-
-}

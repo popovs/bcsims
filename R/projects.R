@@ -24,7 +24,7 @@
 #' * **project_name** String. Partial or full match of project name. Case-insensitive.
 #'
 #' @param all Logical. Should records for all available projects in SIMS be returned, or only personal user projects? All projects are returned by default.
-#' @param params A vector of API parameters, e.g. `c(keyword = "bctw", keyword = "telemetry", itis_tsns = c(180701, 202411))`. See Details for a list of acceptable paramters.
+#' @param params A vector of API parameters, e.g. `c(keyword = "bctw", keyword = "telemetry", itis_tsns = c(180701, 202411))`. See Details for a list of acceptable parameters.
 #'
 #' @returns A tibble of projects.
 #' @export
@@ -59,6 +59,8 @@ get_sims_projects <- function(all = TRUE, params = NULL) {
     httr2::resp_body_string() # resp_body_json for tidyjson methods, resp_body_string for jsonlite methods.
 
   # Extract projects
+  # TODO: will this fail if there are many pages? does the request
+  # need to be looped for each page?
   projects <- jsonlite::fromJSON(resp)[[1]] # Just grab first item. Item 2 is just the pagination information
 
   # Clean up output
