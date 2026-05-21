@@ -12,7 +12,11 @@
 #' See the License for the specific language governing permissions and
 #' limitations under the License.
 
-#' Functions to build SIMS API GET requests
+#' Functions to build SIMS API GET, POST, and DELETE requests
+#'
+#' TODO list:
+#' - consider actually performing the request w `get_sims()` to reduce
+#'    duplicated code bits in every other `get_sims_*` fxn.
 
 #' Build a SIMS API URL GET request
 #'
@@ -45,13 +49,10 @@ get_sims <- function(...) {
     httr2::req_url_path_append(url_bits)
   # TODO: since the request is pretty much always performed
   # in all subsequent fxns, maybe just perform the request within
-  # this fxn too? And Take care of basic table formatting +
+  # this fxn too? And take care of basic table formatting +
   # dealing w pagination?
+  # It would require some logic, since e.g. the users request returns
+  # no pages, but a list of 12 items (see `get_sims_user`)
   # Return
   return(req)
 }
-
-
-
-
-

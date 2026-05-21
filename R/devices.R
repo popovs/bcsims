@@ -49,7 +49,7 @@ get_sims_devices <- function(project_id, survey_id = NULL) {
     resp <- httr2::req_perform(req) |>
       httr2::resp_body_string() # resp_body_json for tidyjson methods, resp_body_string for jsonlite methods.
 
-    # Extract projects
+    # Extract devices
     # TODO: will this fail if there are many pages? does the request
     # need to be looped for each page?
     devices <- jsonlite::fromJSON(resp)[[1]] # Just grab first item. Item 2 is just the pagination information
