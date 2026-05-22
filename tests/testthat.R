@@ -10,3 +10,14 @@ library(testthat)
 library(bcsims)
 
 test_check("bcsims")
+
+# Misc notes on remaining issues that get flagged in R CMD CHECK
+#
+# "no visible binding for global variable 'foo'"
+# I'm specifically choosing to ignore this issue for now because
+# it feels more akin to a CRAN/check issue rather than a code
+# issue. All workarounds I have found are more centered on hacky
+# ways of getting `check` to be 'blind' to the issue, when in
+# reality, this shouldn't be getting picked up by `check` in the
+# first place, especially now that the native pipe |> has been
+# introduced into base R.
