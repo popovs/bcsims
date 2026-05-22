@@ -1,0 +1,38 @@
+{
+    "surveys": [
+
+      {
+            "survey_id": 109,
+            "name": "Jan 2022 wolf counts - called-in reports",
+            "progress_id": 2,
+            "start_date": "2022-01-03",
+            "end_date": "2022-01-14",
+            "focal_species": [
+                180596
+            ],
+            "focal_species_names": [
+                "wolf (Canis lupus)"
+            ]
+        },
+
+        {
+            "survey_id": 110,
+            "name": "Jan 2022 wolf counts - aerial",
+            "progress_id": 3,
+            "start_date": "2022-01-03",
+            "end_date": "2022-01-14",
+            "focal_species": [
+                180596
+            ],
+            "focal_species_names": [
+                "wolf (Canis lupus)"
+            ]
+        }
+    ],
+    "pagination": {
+        "total": 2,
+        "per_page": 2,
+        "current_page": 1,
+        "last_page": 1
+    }
+}

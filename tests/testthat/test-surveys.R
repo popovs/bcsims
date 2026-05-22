@@ -1,11 +1,22 @@
-# TESTS TO WRITE
 
-# Test that get_sims_surveys methods work - if a numeric
-# is passed, the numeric method is used; otherwise, default.
-# with_mock_dir("projects", {
-#   test_that("get_sims_surveys returns only one survey ", {
-#     testthat::expect_contains(names(get_sims_user()), "system_user_id")
-#   })
-# })
+with_mock_dir("api", {
+  test_that("when no args passed, get_sims_surveys returns all surveys", {
+    expect_equal(nrow(get_sims_surveys()), 19)
+  })
 
-# Test that get_sims_surveys.numeric ignores `params`
+  test_that("when numeric arg passed, get_sims_surveys returns the corresponding project_id's surveys", {
+    expect_equal(nrow(get_sims_surveys(1)), 6)
+    expect_equal(nrow(get_sims_surveys(2)), 1)
+  })
+
+  # TODO: this behavior is confusing and should probably be fixed down the line,
+  # so that's why these tests exist. Ideally you can filter on both project_id
+  # AND params, but at least this warns the user it's ignored.
+  test_that("when numeric arg passed, other args are ignored", {
+    expect_warning(get_sims_surveys(1, params = list(keyword = "dog")))
+  })
+
+  test_that("when params arg is passed, other args are ignored", {
+    expect_warning(get_sims_surveys(params = list(keyword = "cow"), project_id = 4))
+  })
+})

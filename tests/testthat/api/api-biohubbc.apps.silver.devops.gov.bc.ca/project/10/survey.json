@@ -1,0 +1,36 @@
+{
+    "surveys": [
+        {
+            "survey_id": 581,
+            "name": "Survey 1",
+            "start_date": "2026-05-01",
+            "end_date": null,
+            "progress_id": 2,
+            "focal_species": [
+                180092
+            ],
+            "focal_species_names": [
+                "man (Homo sapiens)"
+            ]
+        },
+        {
+            "survey_id": 582,
+            "name": "Survey 2",
+            "start_date": "2026-06-01",
+            "end_date": null,
+            "progress_id": 1,
+            "focal_species": [
+                183815
+            ],
+            "focal_species_names": [
+                "domestic dog (Canis familiaris)"
+            ]
+        }
+    ],
+    "pagination": {
+        "total": 2,
+        "per_page": 2,
+        "current_page": 1,
+        "last_page": 1
+    }
+}

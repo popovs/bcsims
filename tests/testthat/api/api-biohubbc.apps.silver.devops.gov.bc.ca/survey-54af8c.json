@@ -1,0 +1,122 @@
+{
+    "surveys": [
+        {
+            "survey_id": 100,
+            "project_id": 1,
+            "name": "2021 feral cow telemetry",
+            "progress_id": 3,
+            "start_date": "2021-01-22",
+            "end_date": "2021-12-31",
+            "regions": [
+            ],
+            "focal_species": [
+                183838
+            ],
+            "types": [
+                9
+            ]
+        },
+        {
+            "survey_id": 101,
+            "project_id": 1,
+            "name": "2022 feral cow telemetry",
+            "progress_id": 3,
+            "start_date": "2022-01-01",
+            "end_date": "2022-12-31",
+            "regions": [
+            ],
+            "focal_species": [
+                183838
+            ],
+            "types": [
+                9
+            ]
+        },
+        {
+            "survey_id": 102,
+            "project_id": 1,
+            "name": "2023 feral cow telemetry",
+            "progress_id": 3,
+            "start_date": "2023-01-01",
+            "end_date": "2023-12-31",
+            "regions": [
+            ],
+            "focal_species": [
+                183838
+            ],
+            "types": [
+                9
+            ]
+        },
+        {
+            "survey_id": 103,
+            "project_id": 1,
+            "name": "2024 feral cow telemetry",
+            "progress_id": 3,
+            "start_date": "2024-01-01",
+            "end_date": "2024-12-31",
+            "regions": [
+            ],
+            "focal_species": [
+                183838
+            ],
+            "types": [
+                9
+            ]
+        },
+        {
+            "survey_id": 104,
+            "project_id": 1,
+            "name": "2025 feral cow telemetry",
+            "progress_id": 3,
+            "start_date": "2025-01-01",
+            "end_date": "2025-12-31",
+            "regions": [
+            ],
+            "focal_species": [
+                183838
+            ],
+            "types": [
+                9
+            ]
+        },
+        {
+            "survey_id": 105,
+            "project_id": 1,
+            "name": "2026 feral cow telemetry",
+            "progress_id": 2,
+            "start_date": "2026-01-01",
+            "end_date": null,
+            "regions": [
+            ],
+            "focal_species": [
+                183838
+            ],
+            "types": [
+                9
+            ]
+        },
+        {
+            "survey_id": 108,
+            "project_id": 4,
+            "name": "Jan 2022 sea cow calving survey",
+            "progress_id": 3,
+            "start_date": "2022-01-05",
+            "end_date": "2022-01-07",
+            "regions": [
+            ],
+            "focal_species": [
+                180681
+            ],
+            "types": [
+                6
+            ]
+        }
+    ],
+    "pagination": {
+        "total": 7,
+        "per_page": 7,
+        "current_page": 1,
+        "last_page": 1
+    }
+}

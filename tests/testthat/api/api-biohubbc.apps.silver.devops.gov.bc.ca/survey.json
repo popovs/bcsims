@@ -1,0 +1,333 @@
+{
+    "surveys": [
+        {
+            "survey_id": 100,
+            "project_id": 1,
+            "name": "2021 feral cow telemetry",
+            "progress_id": 3,
+            "start_date": "2021-01-22",
+            "end_date": "2021-12-31",
+            "regions": [
+            ],
+            "focal_species": [
+                183838
+            ],
+            "types": [
+                9
+            ]
+        },
+        {
+            "survey_id": 101,
+            "project_id": 1,
+            "name": "2022 feral cow telemetry",
+            "progress_id": 3,
+            "start_date": "2022-01-01",
+            "end_date": "2022-12-31",
+            "regions": [
+            ],
+            "focal_species": [
+                183838
+            ],
+            "types": [
+                9
+            ]
+        },
+        {
+            "survey_id": 102,
+            "project_id": 1,
+            "name": "2023 feral cow telemetry",
+            "progress_id": 3,
+            "start_date": "2023-01-01",
+            "end_date": "2023-12-31",
+            "regions": [
+            ],
+            "focal_species": [
+                183838
+            ],
+            "types": [
+                9
+            ]
+        },
+        {
+            "survey_id": 103,
+            "project_id": 1,
+            "name": "2024 feral cow telemetry",
+            "progress_id": 3,
+            "start_date": "2024-01-01",
+            "end_date": "2024-12-31",
+            "regions": [
+            ],
+            "focal_species": [
+                183838
+            ],
+            "types": [
+                9
+            ]
+        },
+        {
+            "survey_id": 104,
+            "project_id": 1,
+            "name": "2025 feral cow telemetry",
+            "progress_id": 3,
+            "start_date": "2025-01-01",
+            "end_date": "2025-12-31",
+            "regions": [
+            ],
+            "focal_species": [
+                183838
+            ],
+            "types": [
+                9
+            ]
+        },
+        {
+            "survey_id": 105,
+            "project_id": 1,
+            "name": "2026 feral cow telemetry",
+            "progress_id": 2,
+            "start_date": "2026-01-01",
+            "end_date": null,
+            "regions": [
+            ],
+            "focal_species": [
+                183838
+            ],
+            "types": [
+                9
+            ]
+        },
+        {
+            "survey_id": 106,
+            "project_id": 2,
+            "name": "Spring 2021 moose calving survey",
+            "progress_id": 3,
+            "start_date": "2021-01-21",
+            "end_date": "2021-01-24",
+            "regions": [
+            ],
+            "focal_species": [
+                180702,
+                898198
+            ],
+            "types": [
+                9
+            ]
+        },
+        {
+            "survey_id": 107,
+            "project_id": 3,
+            "name": "2021 invasive cyprinid survey blitz",
+            "progress_id": 3,
+            "start_date": "2021-01-21",
+            "end_date": "2021-01-24",
+            "regions": [
+            ],
+            "focal_species": [
+                163342,
+                163350
+            ],
+            "types": [
+                7
+            ]
+        },
+        {
+            "survey_id": 108,
+            "project_id": 4,
+            "name": "Jan 2022 sea cow calving survey",
+            "progress_id": 3,
+            "start_date": "2022-01-05",
+            "end_date": "2022-01-07",
+            "regions": [
+            ],
+            "focal_species": [
+                180681
+            ],
+            "types": [
+                6
+            ]
+        },
+        {
+            "survey_id": 109,
+            "project_id": 5,
+            "name": "Jan 2022 wolf counts - called-in reports",
+            "progress_id": 2,
+            "start_date": "2022-01-03",
+            "end_date": "2022-01-14",
+            "regions": [
+            ],
+            "focal_species": [
+                180596
+            ],
+            "types": [
+                4
+            ]
+        },
+        {
+            "survey_id": 110,
+            "project_id": 5,
+            "name": "Jan 2022 wolf counts - aerial",
+            "progress_id": 3,
+            "start_date": "2022-01-03",
+            "end_date": "2022-01-14",
+            "regions": [
+            ],
+            "focal_species": [
+                180596
+            ],
+            "types": [
+                4
+            ]
+        },
+        {
+            "survey_id": 111,
+            "project_id": 6,
+            "name": "1999 moose counts",
+            "progress_id": 3,
+            "start_date": "1999-02-09",
+            "end_date": "1999-02-24",
+            "regions": [
+            ],
+            "focal_species": [
+                898198
+            ],
+            "types": [
+                6
+            ]
+        },
+        {
+            "survey_id": 112,
+            "project_id": 7,
+            "name": "2015-2016 winter survey",
+            "progress_id": 3,
+            "start_date": "2015-12-21",
+            "end_date": "2016-01-27",
+            "regions": [
+            ],
+            "focal_species": [
+                183815
+            ],
+            "types": [
+                9
+            ]
+        },
+        {
+            "survey_id": 113,
+            "project_id": 8,
+            "name": "Alpine dogs",
+            "progress_id": 3,
+            "start_date": "2022-01-13",
+            "end_date": "2022-01-18",
+            "regions": [
+            ],
+            "focal_species": [
+                183815
+            ],
+            "types": [
+                9
+            ]
+        },
+        {
+            "survey_id": 114,
+            "project_id": 8,
+            "name": "Lowland dogs",
+            "progress_id": 3,
+            "start_date": "2022-01-13",
+            "end_date": "2022-01-18",
+            "regions": [
+            ],
+            "focal_species": [
+                183815
+            ],
+            "types": [
+                9
+            ]
+        },
+        {
+            "survey_id": 115,
+            "project_id": 9,
+            "name": "Corvids survey",
+            "progress_id": 3,
+            "start_date": "2021-01-05",
+            "end_date": "2021-12-15",
+            "regions": [
+            ],
+            "focal_species": [
+                179731
+            ],
+            "types": [
+                5
+            ]
+        },
+        {
+            "survey_id": 116,
+            "project_id": 9,
+            "name": "American crows",
+            "progress_id": 3,
+            "start_date": "2021-01-05",
+            "end_date": "2021-12-15",
+            "regions": [
+            ],
+            "focal_species": [
+                1276451
+            ],
+            "types": [
+                5
+            ]
+        },
+        {
+            "survey_id": 117,
+            "project_id": 10,
+            "name": "Survey 1",
+            "progress_id": 2,
+            "start_date": "2026-05-01",
+            "end_date": null,
+            "regions": [
+                "Cariboo Natural Resource Region",
+                "Kootenay-Boundary Natural Resource Region",
+                "Northeast Natural Resource Region",
+                "Omineca Natural Resource Region",
+                "Skeena Natural Resource Region",
+                "South Coast Natural Resource Region",
+                "Thompson-Okanagan Natural Resource Region",
+                "West Coast Natural Resource Region"
+            ],
+            "focal_species": [
+                180092
+            ],
+            "types": [
+                10
+            ]
+        },
+        {
+            "survey_id": 118,
+            "project_id": 10,
+            "name": "Survey 2",
+            "progress_id": 1,
+            "start_date": "2026-06-01",
+            "end_date": null,
+            "regions": [
+                "Cariboo Natural Resource Region",
+                "Kootenay-Boundary Natural Resource Region",
+                "Northeast Natural Resource Region",
+                "Omineca Natural Resource Region",
+                "Skeena Natural Resource Region",
+                "South Coast Natural Resource Region",
+                "Thompson-Okanagan Natural Resource Region",
+                "West Coast Natural Resource Region"
+            ],
+            "focal_species": [
+                183815
+            ],
+            "types": [
+                9,
+                10
+            ]
+        }
+    ],
+    "pagination": {
+        "total": 18,
+        "per_page": 18,
+        "current_page": 1,
+        "last_page": 1
+    }
+}
