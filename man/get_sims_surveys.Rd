@@ -43,7 +43,8 @@ Get a table of available surveys in SIMS
 all_surveys <- get_sims_surveys()
 
 # Get all surveys that match a certain criteria
-wolf_surveys <- get_sims_surveys(params = c(itis_tsn = 180596))
+wolf_surveys <- get_sims_surveys(params = list(keyword = "wolf"))
+caribou_surveys <- get_sims_surveys(params = list(itis_tsn = 180596))
 
 # Get surveys under a specific project ID
 # Note this method ignores the `params` argument

@@ -2,37 +2,25 @@
 % Please edit documentation in R/projects.R
 \name{get_sims_projects}
 \alias{get_sims_projects}
-\title{Copyright 2026 Province of British Columbia}
+\title{This function grabs all projects visible to you as a SIMS user.}
 \usage{
 get_sims_projects(all = TRUE, params = NULL)
 }
 \arguments{
 \item{all}{Logical. Should records for all available projects in SIMS be returned, or only personal user projects? All projects are returned by default.}
 
-\item{params}{A vector of API parameters, e.g. `c(keyword = "bctw", keyword = "telemetry", itis_tsns = c(180701, 202411))`. See Details for a list of acceptable parameters.}
+\item{params}{A vector of API parameters, e.g. `list(keyword = "bctw", keyword = "telemetry", itis_tsns = c(180701, 202411))`. See Details for a list of acceptable parameters.}
 }
 \value{
 A tibble of projects.
 }
 \description{
-Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
+This function grabs all projects visible to you as a SIMS user.
 }
 \details{
-http://www.apache.org/licenses/LICENSE-2.0
-
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
-Get a table of all available projects in SIMS
-
-This function grabs all projects visible to you as a SIMS user.
-
 API parameters are supplied as a named vector list.
 For the most up-to-date list of parameters accepted by the API, see the [API documentation](https://api-biohubbc.apps.silver.devops.gov.bc.ca/api-docs/).
+
 * **keyword** String. Keywords to search for in the project name. Case-insensitive.
 * **itis_tsns** Integer. ITIS TSN numbers. Multiple numbers can be supplied at once as a comma-separated vector. _Note this will eventually be superceded by BC Conservation Data Centre taxon codes._
 * **itis_tsn** Integer. ITIS TSN number. _Note this will eventually be superceded by BC Conservation Data Centre taxon codes._
@@ -44,9 +32,9 @@ For the most up-to-date list of parameters accepted by the API, see the [API doc
 get_sims_projects()
 
 # Filter to only those with the keyword "wolf"
-get_sims_projects(params = c(keyword = "wolf"))
+get_sims_projects(params = list(keyword = "wolf"))
 
 # Filter to only those with the keyword "wolf" and ITIS TSNs of caribou
-get_sims_projects(params = c(keyword = "wolf", itis_tsns = c(180701, 202411)))
+get_sims_projects(params = list(keyword = "wolf", itis_tsns = c(180701)))
 }
 }

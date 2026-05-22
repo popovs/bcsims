@@ -1,0 +1,52 @@
+{
+    "projects": [
+        {
+            "project_id": 7,
+            "name": "2015-2016 - Dog - Southern Omineca Region - Prince George ",
+            "start_date": "2015-12-21",
+            "end_date": "2016-01-27",
+            "regions": [
+
+            ],
+            "focal_species": [
+                183815
+            ],
+            "types": [
+
+            ],
+            "members": [
+                {
+                    "display_name": "de Silvia, Remus WLRS:EX",
+                    "system_user_id": 5
+                }
+            ]
+        },
+        {
+            "project_id": 8,
+            "name": "2022 - Dog - Aerial Survey - Peace Region",
+            "start_date": "2022-01-13",
+            "end_date": "2022-01-18",
+            "regions": [
+
+            ],
+            "focal_species": [
+                183815
+            ],
+            "types": [
+
+            ],
+            "members": [
+                {
+                    "display_name": "de Silvia, Remus WLRS:EX",
+                    "system_user_id": 5
+                }
+            ]
+        }
+    ],
+    "pagination": {
+        "total": 2,
+        "per_page": 2,
+        "current_page": 1,
+        "last_page": 1
+    }
+}

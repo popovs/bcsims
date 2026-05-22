@@ -1,23 +1,24 @@
-#' Copyright 2026 Province of British Columbia
-#'
-#' Licensed under the Apache License, Version 2.0 (the "License");
-#' you may not use this file except in compliance with the License.
-#' You may obtain a copy of the License at
-#'
-#' http://www.apache.org/licenses/LICENSE-2.0
-#'
-#' Unless required by applicable law or agreed to in writing, software
-#' distributed under the License is distributed on an "AS IS" BASIS,
-#' WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-#' See the License for the specific language governing permissions and
-#' limitations under the License.
+# Copyright 2026 Province of British Columbia
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+# http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
 
-#' Get a table of all available projects in SIMS
+# Get a table of all available projects in SIMS
 #'
 #' This function grabs all projects visible to you as a SIMS user.
 #'
 #' @details API parameters are supplied as a named vector list.
 #' For the most up-to-date list of parameters accepted by the API, see the [API documentation](https://api-biohubbc.apps.silver.devops.gov.bc.ca/api-docs/).
+#'
 #' * **keyword** String. Keywords to search for in the project name. Case-insensitive.
 #' * **itis_tsns** Integer. ITIS TSN numbers. Multiple numbers can be supplied at once as a comma-separated vector. _Note this will eventually be superceded by BC Conservation Data Centre taxon codes._
 #' * **itis_tsn** Integer. ITIS TSN number. _Note this will eventually be superceded by BC Conservation Data Centre taxon codes._
@@ -69,24 +70,34 @@ get_sims_projects <- function(all = TRUE, params = NULL) {
 
   # TODO: perhaps a page/n records limit - once SIMS gets huge?
 
-  # First clean up uggo members matrix-col
-  members <- projects |>
-    dplyr::select(project_id, members) |>
-    tidyr::unnest(cols = members) |>
-    dplyr::select(project_id, display_name) |> # no need to keep system_user_id at this point
-    dplyr::group_by(project_id) |>
-    dplyr::summarise(members = list(display_name)) # create a list-col of members (rather than matrix col)
+  # Only continue if API result returned anything - otherwise return empty df
+  if (length(projects) == 0) {
 
-  # Merge members col back to original df
-  projects <- projects |>
-    dplyr::select(-members, -types) |> # drop existing ugly matrix-col, types col
-    merge(members, by = "project_id") |>
-    dplyr::mutate(start_date = as.Date(start_date),
-                  end_date = as.Date(end_date)) |>
-    tidyr::as_tibble() # tidy it - make our list-cols explicit! To match other tidy outputs/generally with the broader API pkg ecosystem
+    cat("Your query returned no results. Please try a different query.")
+
+  } else {
+
+    # First clean up uggo members matrix-col
+    members <- projects |>
+      dplyr::select(project_id, members) |>
+      tidyr::unnest(cols = members) |>
+      dplyr::select(project_id, display_name) |> # no need to keep system_user_id at this point
+      dplyr::group_by(project_id) |>
+      dplyr::summarise(members = list(display_name)) # create a list-col of members (rather than matrix col)
+
+    # Merge members col back to original df
+    projects <- projects |>
+      dplyr::select(-members, -types) |> # drop existing ugly matrix-col, types col
+      merge(members, by = "project_id") |>
+      dplyr::mutate(start_date = as.Date(start_date),
+                    end_date = as.Date(end_date)) |>
+      tidyr::as_tibble() # tidy it - make our list-cols explicit! To match other tidy outputs/generally with the broader API pkg ecosystem
 
 
-  return(projects)
+    return(projects)
+  }
+
+
 }
 
 

@@ -53,6 +53,9 @@ get_sims <- function(...) {
   # dealing w pagination?
   # It would require some logic, since e.g. the users request returns
   # no pages, but a list of 12 items (see `get_sims_user`)
+  # THE DOWNSIDE OF THIS is that it's not as easy to pass extra
+  # API params to fxns down the line. THis method is nice bc it
+  # builds the base URL route and then you can tack on params at the end.
   # Return
   return(req)
 }
