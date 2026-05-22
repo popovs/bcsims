@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# Get a table of all available projects in SIMS
+#' Get a table of all available projects in SIMS
 #'
 #' This function grabs all projects visible to you as a SIMS user.
 #'
@@ -73,7 +73,7 @@ get_sims_projects <- function(all = TRUE, params = NULL) {
   # Only continue if API result returned anything - otherwise return empty df
   if (length(projects) == 0) {
 
-    cat("Your query returned no results. Please try a different query.")
+    return("Your query returned no results. Please try a different query.")
 
   } else {
 

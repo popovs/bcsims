@@ -2,7 +2,7 @@
 % Please edit documentation in R/projects.R
 \name{get_sims_projects}
 \alias{get_sims_projects}
-\title{This function grabs all projects visible to you as a SIMS user.}
+\title{Get a table of all available projects in SIMS}
 \usage{
 get_sims_projects(all = TRUE, params = NULL)
 }
