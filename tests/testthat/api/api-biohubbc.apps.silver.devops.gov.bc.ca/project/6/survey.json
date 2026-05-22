@@ -1,0 +1,24 @@
+{
+    "surveys": [
+      {
+            "survey_id": 111,
+            "name": "1999 moose counts",
+            "progress_id": 3,
+            "start_date": "1999-02-09",
+            "end_date": "1999-02-24",
+            "focal_species": [
+                898198
+            ],
+            "focal_species_names": [
+                "moose (Alces americanus)"
+            ]
+        }
+
+    ],
+    "pagination": {
+        "total": 1,
+        "per_page": 1,
+        "current_page": 1,
+        "last_page": 1
+    }
+}

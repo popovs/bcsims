@@ -2,7 +2,7 @@
 % Please edit documentation in R/devices.R
 \name{get_sims_devices}
 \alias{get_sims_devices}
-\title{Copyright 2026 Province of British Columbia}
+\title{Get a table of devices within a given project and/or survey}
 \usage{
 get_sims_devices(project_id, survey_id = NULL)
 }
@@ -15,24 +15,12 @@ get_sims_devices(project_id, survey_id = NULL)
 A tibble of devices.
 }
 \description{
-Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
-}
-\details{
-http://www.apache.org/licenses/LICENSE-2.0
-
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
 Get a table of devices within a given project and/or survey
 }
 \examples{
 \dontrun{
-get_sims_devices(project_id = 42)
+get_sims_devices(project_id = 1)
 
-get_sims_devices(project_id = 42, survey_id = 52)
+get_sims_devices(project_id = 1, survey_id = 101)
 }
 }

@@ -1,0 +1,12 @@
+structure(list(method = "GET", url = "https://api-biohubbc.apps.silver.devops.gov.bc.ca/project?itis_tsn=x",
+    status_code = 400L, headers = structure(list(`x-powered-by` = "Express",
+        `access-control-allow-headers` = "X-Requested-With, Content-Type, Authorization, responseType",
+        `access-control-allow-methods` = "GET, POST, OPTIONS, PUT, PATCH, DELETE, HEAD",
+        `access-control-allow-origin` = "*", `cache-control` = "no-store",
+        `content-type` = "application/json; charset=utf-8", `content-length` = "581",
+        etag = "W/\"245-BkGOXUyz7ZTMh7Y83MgtcIj5HPM\"", date = "Fri, 22 May 2026 17:26:38 GMT",
+        `keep-alive` = "timeout=5", `set-cookie` = "REDACTED"), class = "httr2_headers"),
+    body = charToRaw("{\"name\":\"Bad Request\",\"status\":400,\"message\":\"Request Validation Error\",\"errors\":[{\"instancePath\":\"/itis_tsn\",\"schemaPath\":\"#/properties/itis_tsn/anyOf/0/type\",\"keyword\":\"type\",\"params\":{\"type\":\"integer\"},\"message\":\"must be integer\",\"location\":\"query\"},{\"instancePath\":\"/itis_tsn\",\"schemaPath\":\"#/properties/itis_tsn/anyOf/1/type\",\"keyword\":\"type\",\"params\":{\"type\":\"null\"},\"message\":\"must be null\",\"location\":\"query\"},{\"instancePath\":\"/itis_tsn\",\"schemaPath\":\"#/properties/itis_tsn/anyOf\",\"keyword\":\"anyOf\",\"params\":{},\"message\":\"must match a schema in anyOf\",\"location\":\"query\"}]}"),
+    timing = c(redirect = 0, namelookup = 0.014189, connect = 0.03604,
+    pretransfer = 0.064727, starttransfer = 0.101258, total = 0.10134
+    ), cache = new.env(parent = emptyenv())), class = "httr2_response")

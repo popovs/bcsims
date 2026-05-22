@@ -1,0 +1,240 @@
+{
+    "projects": [
+        {
+            "project_id": 1,
+            "name": "Cow Survey",
+            "start_date": "2021-01-22",
+            "end_date": "2021-01-25",
+            "regions": [
+
+            ],
+            "focal_species": [
+                183838
+            ],
+            "types": [
+
+            ],
+            "members": [
+                {
+                    "display_name": "Bob, Billy WLRS:EX",
+                    "system_user_id": 1
+                }
+            ]
+        },
+        {
+            "project_id": 2,
+            "name": "Moose Survey",
+            "start_date": "2021-02-16",
+            "end_date": "2021-02-18",
+            "regions": [
+
+            ],
+            "focal_species": [
+                180702,
+                898198
+            ],
+            "types": [
+
+            ],
+            "members": [
+                {
+                    "display_name": "Bob, Billy WLRS:EX",
+                    "system_user_id": 1
+                }
+            ]
+        },
+        {
+            "project_id": 3,
+            "name": "Goldfish Survey",
+            "start_date": "2021-01-21",
+            "end_date": "2021-01-24",
+            "regions": [
+
+            ],
+            "focal_species": [
+                163342,
+                163350
+            ],
+            "types": [
+
+            ],
+            "members": [
+                {
+                    "display_name": "Silverdollar, Sandy WLRS:EX",
+                    "system_user_id": 2
+                }
+            ]
+        },
+        {
+            "project_id": 4,
+            "name": "Sea Cow Survey",
+            "start_date": "2022-01-05",
+            "end_date": "2022-01-07",
+            "regions": [
+
+            ],
+            "focal_species": [
+                180681
+            ],
+            "types": [
+
+            ],
+            "members": [
+                {
+                    "display_name": "Silverdollar, Sandy WLRS:EX",
+                    "system_user_id": 2
+                },
+                {
+                    "display_name": "Orca, Suspicious WLRS:EX",
+                    "system_user_id": 3
+                }
+            ]
+        },
+        {
+            "project_id": 5,
+            "name": "Wolf Inventory",
+            "start_date": "2022-01-03",
+            "end_date": "2022-01-14",
+            "regions": [
+
+            ],
+            "focal_species": [
+                180596
+            ],
+            "types": [
+
+            ],
+            "members": [
+                {
+                    "display_name": "de Silvia, Romulus FOR:EX",
+                    "system_user_id": 4
+                },
+                {
+                    "display_name": "de Silvia, Remus WLRS:EX",
+                    "system_user_id": 5
+                }
+            ]
+        },
+        {
+            "project_id": 6,
+            "name": "1999 - Moose survey",
+            "start_date": "1999-02-09",
+            "end_date": "1999-02-24",
+            "regions": [
+
+            ],
+            "focal_species": [
+                898198
+            ],
+            "types": [
+
+            ],
+            "members": [
+                {
+                    "display_name": "Bob, Billy WLRS:EX",
+                    "system_user_id": 1
+                }
+            ]
+        },
+        {
+            "project_id": 7,
+            "name": "2015-2016 - Dog - Southern Omineca Region - Prince George ",
+            "start_date": "2015-12-21",
+            "end_date": "2016-01-27",
+            "regions": [
+
+            ],
+            "focal_species": [
+                183815
+            ],
+            "types": [
+
+            ],
+            "members": [
+                {
+                    "display_name": "de Silvia, Remus WLRS:EX",
+                    "system_user_id": 5
+                }
+            ]
+        },
+        {
+            "project_id": 8,
+            "name": "2022 - Dog - Aerial Survey - Peace Region",
+            "start_date": "2022-01-13",
+            "end_date": "2022-01-18",
+            "regions": [
+
+            ],
+            "focal_species": [
+                183815
+            ],
+            "types": [
+
+            ],
+            "members": [
+                {
+                    "display_name": "de Silvia, Remus WLRS:EX",
+                    "system_user_id": 5
+                }
+            ]
+        },
+        {
+            "project_id": 9,
+            "name": "Crows - urban areas",
+            "start_date": "2021-01-05",
+            "end_date": "2021-12-15",
+            "regions": [
+
+            ],
+            "focal_species": [
+                179731,
+                1276451
+            ],
+            "types": [
+
+            ],
+            "members": [
+                {
+                    "display_name": "Pecks, Big WLRS:EX",
+                    "system_user_id": 6
+                }
+            ]
+        },
+        {
+            "project_id": 10,
+            "name": "bcsims R pkg test",
+            "start_date": "2026-05-01",
+            "end_date": null,
+            "regions": [
+                "Cariboo Natural Resource Region",
+                "Kootenay-Boundary Natural Resource Region",
+                "Northeast Natural Resource Region",
+                "Omineca Natural Resource Region",
+                "Skeena Natural Resource Region",
+                "South Coast Natural Resource Region",
+                "Thompson-Okanagan Natural Resource Region",
+                "West Coast Natural Resource Region"
+            ],
+            "focal_species": [
+                180092,
+                183815
+            ],
+            "types": [
+                9,
+                10
+            ],
+            "members": [
+                {
+                    "display_name": "Gov, BC ORG:EX",
+                    "system_user_id": 999
+                }
+            ]
+        }
+    ],
+    "pagination": {
+        "total": 10,
+        "per_page": 10,
+        "current_page": 1,
+        "last_page": 1
+    }
+}

@@ -1,0 +1,35 @@
+{
+    "projects": [
+        {
+            "project_id": 5,
+            "name": "Wolf Inventory",
+            "start_date": "2022-01-03",
+            "end_date": "2022-01-14",
+            "regions": [
+
+            ],
+            "focal_species": [
+                180596
+            ],
+            "types": [
+
+            ],
+            "members": [
+                {
+                    "display_name": "de Silvia, Romulus FOR:EX",
+                    "system_user_id": 4
+                },
+                {
+                    "display_name": "de Silvia, Remus WLRS:EX",
+                    "system_user_id": 5
+                }
+            ]
+        }
+    ],
+    "pagination": {
+        "total": 1,
+        "per_page": 1,
+        "current_page": 1,
+        "last_page": 1
+    }
+}

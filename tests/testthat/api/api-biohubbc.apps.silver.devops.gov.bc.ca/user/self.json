@@ -1,0 +1,18 @@
+{
+    "system_user_id": 999,
+    "user_identifier": "BCGOV",
+    "user_guid": "ASDF1234",
+    "record_end_date": null,
+    "identity_source": "ID_SOURCE",
+    "role_ids": [
+        1
+    ],
+    "role_names": [
+        "System Administrator"
+    ],
+    "email": "bcgov.EMAIL@gov.bc.ca",
+    "display_name": "Gov, BC ORG:EX",
+    "given_name": "BC",
+    "family_name": "Gov",
+    "agency": null
+}

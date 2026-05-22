@@ -1,0 +1,88 @@
+{
+    "surveys": [
+        {
+            "survey_id": 100,
+            "name": "2021 feral cow telemetry",
+            "progress_id": 3,
+            "start_date": "2021-01-22",
+            "end_date": "2021-12-31",
+            "focal_species": [
+                183838
+            ],
+            "focal_species_names": [
+                "feral cattle (Bos taurus)"
+            ]
+        },
+        {
+            "survey_id": 101,
+            "name": "2022 feral cow telemetry",
+            "progress_id": 3,
+            "start_date": "2022-01-22",
+            "end_date": "2022-12-31",
+            "focal_species": [
+                183838
+            ],
+            "focal_species_names": [
+                "feral cattle (Bos taurus)"
+            ]
+        },
+        {
+            "survey_id": 102,
+            "name": "2023 feral cow telemetry",
+            "progress_id": 3,
+            "start_date": "2023-01-22",
+            "end_date": "2023-12-31",
+            "focal_species": [
+                183838
+            ],
+            "focal_species_names": [
+                "feral cattle (Bos taurus)"
+            ]
+        },
+        {
+            "survey_id": 103,
+            "name": "2024 feral cow telemetry",
+            "progress_id": 3,
+            "start_date": "2024-01-22",
+            "end_date": "2024-12-31",
+            "focal_species": [
+                183838
+            ],
+            "focal_species_names": [
+                "feral cattle (Bos taurus)"
+            ]
+        },
+        {
+            "survey_id": 104,
+            "name": "2025 feral cow telemetry",
+            "progress_id": 3,
+            "start_date": "2025-01-22",
+            "end_date": "2025-12-31",
+            "focal_species": [
+                183838
+            ],
+            "focal_species_names": [
+                "feral cattle (Bos taurus)"
+            ]
+        },
+        {
+            "survey_id": 105,
+            "name": "2026 feral cow telemetry",
+            "progress_id": 2,
+            "start_date": "2026-01-22",
+            "end_date": null,
+            "focal_species": [
+                183838
+            ],
+            "focal_species_names": [
+                "feral cattle (Bos taurus)"
+            ]
+        }
+    ],
+    "pagination": {
+        "total": 5,
+        "per_page": 5,
+        "current_page": 1,
+        "last_page": 1
+    }
+}

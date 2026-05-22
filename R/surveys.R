@@ -42,6 +42,15 @@ get_sims_surveys <- function(...) {
 #' @rdname get_sims_surveys
 #' @export
 get_sims_surveys.default <- function(params = NULL, ...) {
+
+  # Check if additional args supplied, and if so, warn user
+  # they are ignored.
+  dots <- list(...)
+  if (length(dots) > 0) {
+    unused_args <- names(dots)
+    warning("Ignoring unused arguments ", paste(names(dots), collapse = ", "))
+  }
+
   # Build request
   # /survey/
   req <- get_sims("survey") |>
@@ -70,6 +79,14 @@ get_sims_surveys.default <- function(params = NULL, ...) {
 #' @rdname get_sims_surveys
 #' @export
 get_sims_surveys.numeric <- function(project_id, ...) {
+  # Check if additional args supplied, and if so, warn user
+  # they are ignored.
+  dots <- list(...)
+  if (length(dots) > 0) {
+    unused_args <- names(dots)
+    warning("Ignoring unused arguments ", paste(names(dots), collapse = ", "))
+  }
+
   # Build request
   # /project/{projectId}/survey/
   req <- get_sims("project", project_id, "survey")
