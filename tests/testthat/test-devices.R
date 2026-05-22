@@ -12,11 +12,20 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# TESTS TO WRITE
-
-# Test that if no survey_id is provided, that survey_ids
-# are successfully queried from the project id alone.
-# TODO: make dummy/mock json responses for both options
-# for the purposes of testing
+with_mock_dir("api", {
+  test_that("if no survey_id provided, all surveys are queried for a given project to get the device list", {
+    expect_equal(nrow(get_sims_devices(1)), 18)
+  })
+  test_that("if both project_id and survey_id provided, return device list only for that project", {
+    expect_equal(nrow(get_sims_devices(1, 100)), 2)
+  })
+  test_that("if no devices associated with a survey, a message is returned", {
+    expect_equal(get_sims_devices(1, 102), "There are no devices associated with this survey (project_id = 1, survey_id = 102).")
+    expect_equal(get_sims_devices(2, 106), "There are no devices associated with this survey (project_id = 2, survey_id = 106).")
+  })
+  test_that("if no devices associated with a project, a message is returned", {
+    expect_equal(get_sims_devices(2), "There are no devices associated with this project (project_id = 2).")
+  })
+})
 
 

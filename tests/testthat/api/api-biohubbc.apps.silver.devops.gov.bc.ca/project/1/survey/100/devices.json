@@ -1,0 +1,29 @@
+{
+    "devices": [
+        {
+            "device_id": 1000,
+            "survey_id": 100,
+            "device_key": "lotek:111111",
+            "serial": "111111",
+            "device_make_id": 2,
+            "model": "Lifecycle Pro 330",
+            "comment": "2025: Data Migration"
+        },
+        {
+            "device_id": 1001,
+            "survey_id": 100,
+            "device_key": "lotek:222222",
+            "serial": "222222",
+            "device_make_id": 2,
+            "model": "Lifecycle Pro 330",
+            "comment": "2025: Data Migration"
+        }
+    ],
+    "count": 2,
+    "pagination": {
+        "total": 2,
+        "per_page": 2,
+        "current_page": 1,
+        "last_page": 1
+    }
+}

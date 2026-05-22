@@ -19,8 +19,8 @@ Get a table of devices within a given project and/or survey
 }
 \examples{
 \dontrun{
-get_sims_devices(project_id = 42)
+get_sims_devices(project_id = 1)
 
-get_sims_devices(project_id = 42, survey_id = 52)
+get_sims_devices(project_id = 1, survey_id = 101)
 }
 }

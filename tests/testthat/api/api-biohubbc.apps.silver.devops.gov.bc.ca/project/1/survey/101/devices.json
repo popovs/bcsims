@@ -1,0 +1,155 @@
+{
+    "devices": [
+        {
+            "device_id": 1002,
+            "survey_id": 101,
+            "device_key": "lotek:100000",
+            "serial": "100000",
+            "device_make_id": 2,
+            "model": "Lifecycle Pro 330",
+            "comment": "2025: Data Migration"
+        },
+        {
+            "device_id": 1003,
+            "survey_id": 101,
+            "device_key": "lotek:12345",
+            "serial": "12345",
+            "device_make_id": 2,
+            "model": "LITETRACK IRIDIUM360",
+            "comment": "2025: Data Migration"
+        },
+        {
+            "device_id": 1004,
+            "survey_id": 101,
+            "device_key": "lotek:100001",
+            "serial": "100001",
+            "device_make_id": 2,
+            "model": "Lifecycle Pro 330",
+            "comment": "2025: Data Migration"
+        },
+        {
+            "device_id": 1005,
+            "survey_id": 101,
+            "device_key": "lotek:100002",
+            "serial": "100002",
+            "device_make_id": 2,
+            "model": "Lifecycle Pro 330",
+            "comment": "2025: Data Migration"
+        },
+        {
+            "device_id": 1006,
+            "survey_id": 101,
+            "device_key": "lotek:12344",
+            "serial": "12344",
+            "device_make_id": 2,
+            "model": "LITETRACK IRIDIUM360",
+            "comment": "2025: Data Migration"
+        },
+        {
+            "device_id": 1007,
+            "survey_id": 101,
+            "device_key": "lotek:12346",
+            "serial": "12346",
+            "device_make_id": 2,
+            "model": "LITETRACK IRIDIUM360",
+            "comment": "2025: Data Migration"
+        },
+        {
+            "device_id": 1008,
+            "survey_id": 101,
+            "device_key": "lotek:100003",
+            "serial": "100003",
+            "device_make_id": 2,
+            "model": "Lifecycle Pro 330",
+            "comment": "2025: Data Migration"
+        },
+        {
+            "device_id": 1009,
+            "survey_id": 101,
+            "device_key": "lotek:100004",
+            "serial": "100004",
+            "device_make_id": 2,
+            "model": "Lifecycle Pro 330",
+            "comment": "2025: Data Migration"
+        },
+        {
+            "device_id": 1010,
+            "survey_id": 101,
+            "device_key": "lotek:12347",
+            "serial": "12347",
+            "device_make_id": 2,
+            "model": "LITETRACK IRIDIUM360",
+            "comment": "2025: Data Migration"
+        },
+        {
+            "device_id": 1011,
+            "survey_id": 101,
+            "device_key": "lotek:100005",
+            "serial": "100005",
+            "device_make_id": 2,
+            "model": "Lifecycle Pro 330",
+            "comment": "2025: Data Migration"
+        },
+        {
+            "device_id": 1012,
+            "survey_id": 101,
+            "device_key": "lotek:100006",
+            "serial": "100006",
+            "device_make_id": 2,
+            "model": "Lifecycle Pro 330",
+            "comment": "2025: Data Migration"
+        },
+        {
+            "device_id": 1013,
+            "survey_id": 101,
+            "device_key": "lotek:12348",
+            "serial": "12348",
+            "device_make_id": 2,
+            "model": "LITETRACK IRIDIUM360",
+            "comment": "2025: Data Migration"
+        },
+        {
+            "device_id": 1014,
+            "survey_id": 101,
+            "device_key": "lotek:100007",
+            "serial": "100007",
+            "device_make_id": 2,
+            "model": "Lifecycle Pro 330",
+            "comment": "2025: Data Migration"
+        },
+        {
+            "device_id": 1015,
+            "survey_id": 101,
+            "device_key": "lotek:100008",
+            "serial": "100008",
+            "device_make_id": 2,
+            "model": "Lifecycle Pro 330",
+            "comment": "2025: Data Migration"
+        },
+        {
+            "device_id": 1016,
+            "survey_id": 101,
+            "device_key": "lotek:100009",
+            "serial": "100009",
+            "device_make_id": 2,
+            "model": "Lifecycle Pro 330",
+            "comment": "2025: Data Migration"
+        },
+        {
+            "device_id": 1017,
+            "survey_id": 101,
+            "device_key": "lotek:12349",
+            "serial": "12349",
+            "device_make_id": 2,
+            "model": null,
+            "comment": "2025: Data Migration"
+        }
+    ],
+    "count": 16,
+    "pagination": {
+        "total": 16,
+        "per_page": 16,
+        "current_page": 1,
+        "last_page": 1
+    }
+}
